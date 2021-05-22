@@ -12,24 +12,6 @@ local oUF = oUF or Framework.oUF
 
 -- Locales
 
--- Disconnected Colors
-oUF.colors.disconnected = { 0.1, 0.1, 0.1 }
-
--- Rune Colors
-oUF.colors.runes = {
-	[1] = { 0.69, 0.31, 0.31 },
-	[2] = { 0.41, 0.80, 1.00 },
-	[3] = { 0.65, 0.63, 0.35 },
-	[5] = { 0.55, 0.57, 0.61 },
-}
-
-oUF.colors.totems = {
-	[1] = { 0.78, 0.25, 0.25 },
-	[2] = { 0.78, 0.61, 0.43 },
-	[3] = { 0.25, 0.78, 0.92 },
-	[4] = { 0.99, 0.99, 0.99 },
-}
-
 -- Reputation Colors
 oUF.colors.reaction = {
 	[1] = { 0.80, 0.30, 0.22 },
