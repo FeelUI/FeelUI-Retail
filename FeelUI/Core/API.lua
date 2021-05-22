@@ -219,7 +219,7 @@ end
 local Point = function(...)
 	local Object, Arg1, Arg2, Arg3, Arg4, Arg5 = select(1, ...)
 
-	if (not Object) then
+	if not (Object) then
 		return
 	end
 

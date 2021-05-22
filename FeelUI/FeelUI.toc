@@ -8,7 +8,7 @@
 ## Engine
 Engine\Engine.lua
 Engine\Modules.lua
-Eingine\Skinning.lua
+Engine\Skinning.lua
 
 ## Libraries
 Libraries\oUF\init.lua

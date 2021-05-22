@@ -19,7 +19,10 @@ function UI:RegisterChatCommand(Command, Func)
 
 	if (type(Func) == 'string') then
 		SlashCmdList[Name] = function()
-
+			if (Func == 'Status') then
+				local StatusReport = UI:CallModule('StatusReport')
+				StatusReport:Toggle()
+			end
 		end
 	else
 		SlashCmdList[Command] = Func
@@ -37,5 +40,6 @@ SlashCmdList.RELOADUI = C_UI_Reload
 
 UI:RegisterChatCommand('feel', 'GUI')
 UI:RegisterChatCommand('feelui', 'GUI')
+UI:RegisterChatCommand('fstatus', 'Status')
 UI:RegisterChatCommand('resetui', 'Reset')
 UI:RegisterChatCommand('moveui', 'MoveUI')
