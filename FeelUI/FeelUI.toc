@@ -11,6 +11,52 @@ Engine\Modules.lua
 Eingine\Skinning.lua
 
 ## Libraries
+Libraries\oUF\init.lua
+Libraries\oUF\private.lua
+Libraries\oUF\ouf.lua
+Libraries\oUF\events.lua
+Libraries\oUF\factory.lua
+Libraries\oUF\blizzard.lua
+Libraries\oUF\units.lua
+Libraries\oUF\colors.lua
+Libraries\oUF\elements\additionalpower.lua
+Libraries\oUF\elements\alternativepower.lua
+Libraries\oUF\elements\assistantindicator.lua
+Libraries\oUF\elements\auras.lua
+Libraries\oUF\elements\castbar.lua
+Libraries\oUF\elements\classpower.lua
+Libraries\oUF\elements\combatindicator.lua
+Libraries\oUF\elements\grouproleindicator.lua
+Libraries\oUF\elements\health.lua
+Libraries\oUF\elements\healthprediction.lua
+Libraries\oUF\elements\leaderindicator.lua
+Libraries\oUF\elements\phaseindicator.lua
+Libraries\oUF\elements\portrait.lua
+Libraries\oUF\elements\power.lua
+Libraries\oUF\elements\powerprediction.lua
+Libraries\oUF\elements\pvpclassificationindicator.lua
+Libraries\oUF\elements\pvpindicator.lua
+Libraries\oUF\elements\questindicator.lua
+Libraries\oUF\elements\raidroleindicator.lua
+Libraries\oUF\elements\raidtargetindicator.lua
+Libraries\oUF\elements\range.lua
+Libraries\oUF\elements\readycheckindicator.lua
+Libraries\oUF\elements\restingindicator.lua
+Libraries\oUF\elements\resurrectindicator.lua
+Libraries\oUF\elements\runes.lua
+Libraries\oUF\elements\stagger.lua
+Libraries\oUF\elements\summonindicator.lua
+Libraries\oUF\elements\tags.lua
+Libraries\oUF\elements\threatindicator.lua
+Libraries\oUF\elements\totems.lua
+Libraries\oUF\finalize.lua
+Libraries\LibAnim\LibAnim.lua
+Libraries\LibStub\LibStub.lua
+Libraries\LibSpellRange-1.0\LibSpellRange-1.0.lua
+Libraries\LibAnim-2.07\LibAnim-2.07.lua
+Libraries\LibAnimFadeInOut-1.0\LibAnimFadeInOut-1.0.lua
+Libraries\LibAnimGainLoss-1.0\LibAnimGainLoss-1.0.lua
+Libraries\LibAnimSmooth-1.0\LibAnimSmooth-1.0.lua
 
 ## Language
 Language\enUS.lua
