@@ -50,6 +50,10 @@ Libraries\oUF\elements\tags.lua
 Libraries\oUF\elements\threatindicator.lua
 Libraries\oUF\elements\totems.lua
 Libraries\oUF\finalize.lua
+
+Libraries\oUF_Colors\oUF_Colors.lua
+Libraries\oUF_Colors\oUF_ClassColors.lua
+
 Libraries\LibAnim\LibAnim.lua
 Libraries\LibStub\LibStub.lua
 Libraries\LibSpellRange-1.0\LibSpellRange-1.0.lua
