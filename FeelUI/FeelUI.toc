@@ -1,0 +1,51 @@
+## Interface: 90005
+## Title: F|cff00aaffeelUI|r
+## Version: 1.01
+## Author: Natias, Thatmemedk
+## SavedVariables: FeelDB
+## X-Website:
+
+## Engine
+Engine\Engine.lua
+Engine\Modules.lua
+Eingine\Skinning.lua
+
+## Libraries
+
+## Language
+Language\enUS.lua
+Language\deDE.lua
+Language\esES.lua
+Language\esMX.lua
+Language\frFR.lua
+Language\itIT.lua
+Language\koKR.lua
+Language\ptBR.lua
+Language\ruRU.lua
+Language\zhCN.lua
+Language\zhTW.lua
+
+## Settings
+Settings\Settings.lua
+
+## Media
+Media\Media.lua
+
+## Core
+Core\Storage.lua
+Core\Loading.lua
+Core\PixelPerfect.lua
+Core\Core.lua
+Core\Math.lua
+Core\Toolkit.lua
+Core\API.lua
+Core\UIParent.lua
+Core\Moving.lua
+Core\StatusReport.lua
+
+## Modules
+Modules\Fonts\Fonts.lua
+
+## Developer
+Developer\Commands.lua
+Developer\Temp.lua
