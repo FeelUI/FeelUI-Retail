@@ -8,6 +8,7 @@ local match = string.match
 
 -- WoW Globals
 local GetAddOnMetadata = GetAddOnMetadata
+local GetBuildInfo = GetBuildInfo
 local GetCVar = GetCVar
 local GetLocale = GetLocale
 local GetPhysicalScreenSize = GetPhysicalScreenSize
@@ -19,6 +20,11 @@ local UnitGUID = UnitGUID
 local UnitLevel = UnitLevel
 local UnitName = UnitName
 local UnitRace = UnitRace
+
+local WOW_PROJECT_ID = WOW_PROJECT_ID
+local WOW_PROJECT_MAINLINE = WOW_PROJECT_MAINLINE
+local WOW_PROJECT_BURNING_CRUSADE_CLASSIC = WOW_PROJECT_BURNING_CRUSADE_CLASSIC
+local WOW_PROJECT_CLASSIC = WOW_PROJECT_CLASSIC
 
 -- Locales
 local Resolution = select(1, GetPhysicalScreenSize()) .. 'x' .. select(2, GetPhysicalScreenSize())
@@ -67,7 +73,7 @@ if (Engine[1].UserLocale == 'enGB') then
 	Engine[1].UserLocale = 'enUS'
 end
 
--- Game
+-- Resolution
 Engine[1].WindowedMode = Windowed
 Engine[1].FullscreenMode = Fullscreen
 Engine[1].Resolution = Resolution or (Windowed and GetCVar('gxWindowedResolution')) or GetCVar('gxFullscreenResolution')
@@ -76,6 +82,12 @@ Engine[1].ScreenWidth = select(1, GetPhysicalScreenSize())
 Engine[1].PerfectScale = min(1.15, max(0.4, 768 / match(Resolution, '%d+x(%d+)')))
 Engine[1].Mult = PixelPerfectScale / GetCVar('uiScale')
 Engine[1].NoScaleMult = Engine[1].Mult * GetCVar('uiScale')
+
+-- Game
+Engine[1].WoWPatch, Engine[1].WoWBuild, Engine[1].WoWPatchReleaseDate, Engine[1].TocVersion = GetBuildInfo()
+Engine[1].IsRetail = WOW_PROJECT_ID == WOW_PROJECT_MAINLINE
+Engine[1].IsTBC = WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC
+Engine[1].IsClassic = WOW_PROJECT_ID == WOW_PROJECT_CLASSIC
 
 -- Access Tables
 function Engine:Call()
