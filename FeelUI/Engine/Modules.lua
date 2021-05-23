@@ -8,7 +8,7 @@ local _G = _G
 local CreateFrame = CreateFrame
 local UIParent = UIParent
 
--- Locales
+-- Locals
 
 -- Functions
 

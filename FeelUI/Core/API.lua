@@ -17,7 +17,7 @@ local find = string.find
 local CreateFrame = CreateFrame
 local hooksecurefunc = hooksecurefunc
 
--- Locales
+-- Locals
 local Dummy = UI.Dummy
 local UserClass = UI.UserClass
 

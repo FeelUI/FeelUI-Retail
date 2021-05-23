@@ -10,7 +10,7 @@ local oUF = oUF or Framework.oUF
 
 -- WoW Globals
 
--- Locales
+-- Locals
 
 -- Reputation Colors
 oUF.colors.reaction = {

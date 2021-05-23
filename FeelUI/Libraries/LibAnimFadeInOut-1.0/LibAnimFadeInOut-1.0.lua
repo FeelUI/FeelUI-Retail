@@ -1,5 +1,5 @@
 -- Call Interface
-local UI, Settings, Assets, Language = select(2, ...):Call()
+local UI, DB, Media, Language = select(2, ...):Call()
 
 -- Lib Globals
 local select = select

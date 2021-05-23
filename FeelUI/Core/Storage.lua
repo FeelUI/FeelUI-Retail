@@ -15,7 +15,7 @@ local split = string.split
 
 -- WoW Globals
 
--- Locales
+-- Locals
 local UIVersion = UI.Version
 local UserName = UI.UserName
 local UserRealm = UI.UserRealm

@@ -11,7 +11,7 @@ local _G = _G
 local CHAT_FONT_HEIGHTS = CHAT_FONT_HEIGHTS
 local UIDROPDOWNMENU_DEFAULT_TEXT_HEIGHT = UIDROPDOWNMENU_DEFAULT_TEXT_HEIGHT
 
--- Locales
+-- Locals
 
 -- Functions
 function Fonts:SetFont(Font, Size, Style, R, G, B, SR, SG, SB, SX, SY)

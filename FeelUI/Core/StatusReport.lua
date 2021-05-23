@@ -14,7 +14,7 @@ local UNKNOWN = UNKNOWN
 local NO = NO
 local YES = YES
 
--- Locales
+-- Locals
 local UserName = UI.UserName
 local R, G, B = unpack(UI.GetClassColors)
 

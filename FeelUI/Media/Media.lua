@@ -5,7 +5,7 @@ local UI, DB, Media, Language = select(2, ...):Call()
 
 -- WoW Globals
 
--- Locales
+-- Locals
 local UserClass = UI.UserClass
 
 local Path = [[Interface\AddOns\FeelUI\Media\]]
@@ -19,6 +19,14 @@ Media.Textures = {
 	Overlay = Path .. [[Textures\Overlay]],
 	Shadow = Path .. [[Textures\Shadow]],
 	ShadowOverlay = Path .. [[Textures\ShadowOverlay]],
+	Normal = Path .. [[Textures\Normal]],
+	Normal2 = Path .. [[Textures\Normal2]],
+	Normal3 = Path .. [[Textures\Normal3]],
+	Normal4 = Path .. [[Textures\Normal4]],
+	Melli = Path .. [[Textures\Melli]],
+	Melli2 = Path .. [[Textures\Melli6px]],
+	Smooth = Path .. [[Textures\SmoothV2]],
+	Smooth2 = Path .. [[Textures\SmoothV2_6px]],
 }
 
 Media.Fonts = {

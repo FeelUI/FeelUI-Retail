@@ -9,7 +9,7 @@ local type = type
 -- WoW Globals
 local C_UI_Reload = C_UI.Reload
 
--- Locales
+-- Locals
 
 -- Functions
 

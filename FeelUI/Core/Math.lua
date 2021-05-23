@@ -8,7 +8,7 @@ local match = string.match
 
 -- WoW Globals
 
--- Locales
+-- Locals
 
 -- Functions
 

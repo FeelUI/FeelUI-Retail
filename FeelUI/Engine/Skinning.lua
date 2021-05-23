@@ -11,7 +11,7 @@ local type = type
 -- WoW Globals
 local IsAddOnLoaded = IsAddOnLoaded
 
--- Locales
+-- Locals
 
 -- Functions
 

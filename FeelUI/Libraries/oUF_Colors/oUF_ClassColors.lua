@@ -5,7 +5,7 @@ local UI, DB, Media, Language = select(2, ...):Call()
 
 -- WoW Globals
 
--- Locales
+-- Locals
 local UserClass = UI.UserClass
 
 UI.GetClassColors = Media.Colors.oUF.class[UserClass]

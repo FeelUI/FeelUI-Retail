@@ -1,9 +1,9 @@
 ## Interface: 90005
 ## Title: F|cff00aaffeelUI|r
-## Version: 1.01
+## Version: 1.00
 ## Author: Natias, Thatmemedk
 ## SavedVariables: FeelDB
-## X-Website:
+## X-Website: http://feelui.org
 
 ## Engine
 Engine\Engine.lua

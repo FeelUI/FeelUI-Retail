@@ -27,7 +27,7 @@ local UIParent = UIParent
 local ERR_NOT_IN_COMBAT = ERR_NOT_IN_COMBAT
 local UNKNOWN = UNKNOWN
 
--- Locales
+-- Locals
 local UserName = UI.UserName
 local UserRealm = UI.UserRealm
 

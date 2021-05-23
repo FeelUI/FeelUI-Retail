@@ -12,7 +12,7 @@ local GetCVar = GetCVar
 local SetCVar = SetCVar
 local UIParent = UIParent
 
--- Locales
+-- Locals
 local GetPhysicalScreenSize = GetPhysicalScreenSize
 local Resolution = select(1, GetPhysicalScreenSize()) .. 'x' .. select(2, GetPhysicalScreenSize())
 local PixelPerfectScale = 768 / match(Resolution, '%d+x(%d+)')

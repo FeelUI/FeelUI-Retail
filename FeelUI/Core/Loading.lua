@@ -10,7 +10,7 @@ local pairs = pairs
 
 -- WoW Globals
 
--- Locales
+-- Locals
 local UserName = UI.UserName
 local UserRealm = UI.UserRealm
 

@@ -9,7 +9,7 @@ DEV.Enable = false
 
 -- WoW Globals
 
--- Locales
+-- Locals
 
 -- Functions
 

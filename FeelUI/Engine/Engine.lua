@@ -26,7 +26,7 @@ local WOW_PROJECT_MAINLINE = WOW_PROJECT_MAINLINE
 local WOW_PROJECT_BURNING_CRUSADE_CLASSIC = WOW_PROJECT_BURNING_CRUSADE_CLASSIC
 local WOW_PROJECT_CLASSIC = WOW_PROJECT_CLASSIC
 
--- Locales
+-- Locals
 local Resolution = select(1, GetPhysicalScreenSize()) .. 'x' .. select(2, GetPhysicalScreenSize())
 local Windowed = Display_DisplayModeDropDown:windowedmode()
 local Fullscreen = Display_DisplayModeDropDown:fullscreenmode()

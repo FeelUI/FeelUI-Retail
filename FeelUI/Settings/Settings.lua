@@ -5,7 +5,7 @@ local UI, DB, Media, Language = select(2, ...):Call()
 
 -- WoW Globals
 
--- Locales
+-- Locals
 
 -- Functions
 

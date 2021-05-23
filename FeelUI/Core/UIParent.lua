@@ -7,7 +7,7 @@ local UI, DB, Media, Language = select(2, ...):Call()
 local CreateFrame = CreateFrame
 local UIParent = UIParent
 
--- Locales
+-- Locals
 
 -- Functions
 

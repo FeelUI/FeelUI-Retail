@@ -1,5 +1,5 @@
 -- Call Interface
-local UI, Settings, Assets, Language = select(2, ...):Call()
+local UI, DB, Media, Language = select(2, ...):Call()
 
 -- Lib Globals
 local min = min
@@ -15,29 +15,29 @@ end
 local attachGainToVerticalBar = function(self, object, prev, max)
 	local offset = object:GetHeight() * (1 - clamp(prev / max))
 
-	self:SetPoint("BOTTOMLEFT", object, "TOPLEFT", 0, -offset)
-	self:SetPoint("BOTTOMRIGHT", object, "TOPRIGHT", 0, -offset)
+	self:Point('BOTTOMLEFT', object, 'TOPLEFT', 0, -offset)
+	self:Point('BOTTOMRIGHT', object, 'TOPRIGHT', 0, -offset)
 end
 
 local attachLossToVerticalBar = function(self, object, prev, max)
 	local offset = object:GetHeight() * (1 - clamp(prev / max))
 
-	self:SetPoint("TOPLEFT", object, "TOPLEFT", 0, -offset)
-	self:SetPoint("TOPRIGHT", object, "TOPRIGHT", 0, -offset)
+	self:Point('TOPLEFT', object, 'TOPLEFT', 0, -offset)
+	self:Point('TOPRIGHT', object, 'TOPRIGHT', 0, -offset)
 end
 
 local attachGainToHorizontalBar = function(self, object, prev, max)
 	local offset = object:GetWidth() * (1 - clamp(prev / max))
 
-	self:SetPoint("TOPLEFT", object, "TOPRIGHT", -offset, 0)
-	self:SetPoint("BOTTOMLEFT", object, "BOTTOMRIGHT", -offset, 0)
+	self:Point('TOPLEFT', object, 'TOPRIGHT', -offset, 0)
+	self:Point('BOTTOMLEFT', object, 'BOTTOMRIGHT', -offset, 0)
 end
 
 local attachLossToHorizontalBar = function(self, object, prev, max)
 	local offset = object:GetWidth() * (1 - clamp(prev / max))
 
-	self:SetPoint("TOPRIGHT", object, "TOPRIGHT", -offset, 0)
-	self:SetPoint("BOTTOMRIGHT", object, "BOTTOMRIGHT", -offset, 0)
+	self:Point('TOPRIGHT', object, 'TOPRIGHT', -offset, 0)
+	self:Point('BOTTOMRIGHT', object, 'BOTTOMRIGHT', -offset, 0)
 end
 
 local update = function(self, cur, max, condition)
@@ -53,7 +53,7 @@ local update = function(self, cur, max, condition)
 			if (self.Gain and self.Gain:GetAlpha() == 0) then
 				self.Gain:SetAlpha(1)
 
-				if (self.orientation == "VERTICAL") then
+				if (self.orientation == 'VERTICAL') then
 					attachGainToVerticalBar(self.Gain, self.__owner, prev, max)
 				else
 					attachGainToHorizontalBar(self.Gain, self.__owner, prev, max)
@@ -71,7 +71,7 @@ local update = function(self, cur, max, condition)
 				if (self.Loss:GetAlpha() <= 0.33) then
 					self.Loss:SetAlpha(1)
 
-					if (self.orientation == "VERTICAL") then
+					if (self.orientation == 'VERTICAL') then
 						attachLossToVerticalBar(self.Loss, self.__owner, prev, max)
 					else
 						attachLossToHorizontalBar(self.Loss, self.__owner, prev, max)
@@ -110,24 +110,24 @@ local updateColors = function(self)
 end
 
 local updatePoints = function(self, orientation)
-	orientation = orientation or "HORIZONTAL"
+	orientation = orientation or 'HORIZONTAL'
 
-	if (orientation == "HORIZONTAL") then
+	if (orientation == 'HORIZONTAL') then
 		self.Gain_:ClearAllPoints()
-		self.Gain_:SetPoint("TOPRIGHT", self.__owner:GetStatusBarTexture(), "TOPRIGHT", 0, 0)
-		self.Gain_:SetPoint("BOTTOMRIGHT", self.__owner:GetStatusBarTexture(), "BOTTOMRIGHT", 0, 0)
+		self.Gain_:Point('TOPRIGHT', self.__owner:GetStatusBarTexture(), 'TOPRIGHT', 0, 0)
+		self.Gain_:Point('BOTTOMRIGHT', self.__owner:GetStatusBarTexture(), 'BOTTOMRIGHT', 0, 0)
 
 		self.Loss_:ClearAllPoints()
-		self.Loss_:SetPoint("TOPLEFT", self.__owner:GetStatusBarTexture(), "TOPRIGHT", 0, 0)
-		self.Loss_:SetPoint("BOTTOMLEFT", self.__owner:GetStatusBarTexture(), "BOTTOMRIGHT", 0, 0)
+		self.Loss_:Point('TOPLEFT', self.__owner:GetStatusBarTexture(), 'TOPRIGHT', 0, 0)
+		self.Loss_:Point('BOTTOMLEFT', self.__owner:GetStatusBarTexture(), 'BOTTOMRIGHT', 0, 0)
 	else
 		self.Gain_:ClearAllPoints()
-		self.Gain_:SetPoint("TOPLEFT", self.__owner:GetStatusBarTexture(), "TOPLEFT", 0, 0)
-		self.Gain_:SetPoint("TOPRIGHT", self.__owner:GetStatusBarTexture(), "TOPRIGHT", 0, 0)
+		self.Gain_:Point('TOPLEFT', self.__owner:GetStatusBarTexture(), 'TOPLEFT', 0, 0)
+		self.Gain_:Point('TOPRIGHT', self.__owner:GetStatusBarTexture(), 'TOPRIGHT', 0, 0)
 
 		self.Loss_:ClearAllPoints()
-		self.Loss_:SetPoint("BOTTOMLEFT", self.__owner:GetStatusBarTexture(), "TOPLEFT", 0, 0)
-		self.Loss_:SetPoint("BOTTOMRIGHT", self.__owner:GetStatusBarTexture(), "TOPRIGHT", 0, 0)
+		self.Loss_:Point('BOTTOMLEFT', self.__owner:GetStatusBarTexture(), 'TOPLEFT', 0, 0)
+		self.Loss_:Point('BOTTOMRIGHT', self.__owner:GetStatusBarTexture(), 'TOPRIGHT', 0, 0)
 	end
 
 	self.orientation = orientation
@@ -138,9 +138,9 @@ local updateThreshold = function(self, value)
 end
 
 function UI:CreateGainLossIndicators(object)
-	local Texture = Assets.Textures.Normal
+	local Texture = Media.Textures.Normal
 
-	local gainTexture = object:CreateTexture(nil, "OVERLAY", nil, 1)
+	local gainTexture = object:CreateTexture(nil, 'OVERLAY', nil, 1)
 	gainTexture:SetTexture(Texture)
 	gainTexture:SetAlpha(0)
 
@@ -148,7 +148,7 @@ function UI:CreateGainLossIndicators(object)
 	ag:SetToFinalAlpha(true)
 	gainTexture.FadeOut = ag
 
-	local anim = ag:CreateAnimation("Alpha")
+	local anim = ag:CreateAnimation('Alpha')
 	anim:SetOrder(1)
 	anim:SetFromAlpha(1)
 	anim:SetToAlpha(0)
@@ -156,7 +156,7 @@ function UI:CreateGainLossIndicators(object)
 	anim:SetDuration(0.1)
 	ag.Alpha = anim
 
-	local lossTexture = object:CreateTexture(nil, "OVERLAY", nil, 1)
+	local lossTexture = object:CreateTexture(nil, 'OVERLAY', nil, 1)
 	lossTexture:SetTexture(Texture)
 	lossTexture:SetAlpha(0)
 
@@ -164,7 +164,7 @@ function UI:CreateGainLossIndicators(object)
 	ag:SetToFinalAlpha(true)
 	lossTexture.FadeOut = ag
 
-	anim = ag:CreateAnimation("Alpha")
+	anim = ag:CreateAnimation('Alpha')
 	anim:SetOrder(1)
 	anim:SetFromAlpha(1)
 	anim:SetToAlpha(0)

@@ -7,7 +7,7 @@ local format = string.format
 
 -- WoW Globals
 
--- Locales
+-- Locals
 
 -- Print
 function UI:Print(Color, ...)
